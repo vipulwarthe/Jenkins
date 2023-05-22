@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "Default High Contrast",
+    "remote.SSH.remotePlatform": {
+        "aws-server": "linux",
+        "Docker": "linux",
+        "ubuntu": "linux",
+        "project13": "linux",
+        "docker": "linux",
+        "project": "linux",
+        "Jenkins": "linux"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": 1
+}
