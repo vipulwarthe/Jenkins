@@ -4,60 +4,63 @@
  -----------------------------------------------------------------------------------------
 **************************jenkins ML_CI_CD**************************  
 ------------------------------------------------------------------------------------------
-https://towardsdatascience.com/from-devops-to-mlops-integrate-machine-learning-models-using-jenkins-and-docker-79034dbedf1
-https://github.com/xaviervasques/Jenkins
-amazon linux
-t2.medium
-volume 30 gb
 
-     1  sudo yum update -y
-     2  sudo yum upgrade -y
-     5  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-    22  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-    23  sudo yum upgrade -y
-    24  sudo amazon-linux-extras install java-openjdk11 -y
-    26  sudo yum install jenkins -y
-    28  sudo systemctl enable jenkins
-    29  sudo systemctl start jenkins      (open, public_ip:8080  in browser)
-    30  sudo systemctl status jenkins
-    31  jenkins --version
-    10  sudo yum install git -y
-    11  java --version; jenkins --version; git --version
-    12  sudo amazon-linux-extras | grep docker
-    13  sudo amazon-linux-extras
-    14  sudo amazon-linux-extras install docker -y
-    15  docker --version
-    16  sudo systemctl daemon-reload
-    19  sudo cat /var/lib/jenkins/secrets/initialAdminPassword     (paste password in browser)
-    20  which git
-    21  sudo visudo -f /etc/sudoers.d/filename  (jenkins ALL=(ALL) NOPASSWD: ALL)
-    23  pwd
-    24  ll
-    25  sudo systemctl status docker
-    26  sudo systemctl start docker
-    27  sudo systemctl status docker
-    28  sudo docker image list
-    30  sudo docker ps
-    31  git init
-        git status
-        git add .
-        git remote add origin <>
-    32  vi Dockerfile 
-    35  sudo docker build -t my-docker -f Dockerfile .
-    37  sudo docker image list
-    40  vi train-lda.py
-    41  sudo docker image list
-    42  sudo docker build -t my-docker-lda -f Dockerfile .
-    44  sudo docker ps
-    45  sudo docker image list
-    46  sudo docker build -t my-docker-automl -f Dockerfile .
-    47  sudo docker build -t my-docker-nn -f Dockerfile .
-    48  sudo docker image list
+* Project link : https://towardsdatascience.com/from-devops-to-mlops-integrate-machine-learning-models-using-jenkins-and-docker-79034dbedf1
+
+* github repo link : https://github.com/xaviervasques/Jenkins
+
+* AWS Amazon linux 5.10/t2.medium/30gb/all-traffic server
+
+      1  sudo yum update -y
+      2  sudo yum upgrade -y
+      5  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+      22  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+      23  sudo yum upgrade -y
+      24  sudo amazon-linux-extras install java-openjdk11 -y
+      26  sudo yum install jenkins -y
+      28  sudo systemctl enable jenkins
+      29  sudo systemctl start jenkins      (open, public_ip:8080  in browser)
+      30  sudo systemctl status jenkins
+      31  jenkins --version
+      10  sudo yum install git -y
+      11  java --version; jenkins --version; git --version
+      12  sudo amazon-linux-extras | grep docker
+      13  sudo amazon-linux-extras
+      14  sudo amazon-linux-extras install docker -y
+      15  docker --version
+      16  sudo systemctl daemon-reload
+      19  sudo cat /var/lib/jenkins/secrets/initialAdminPassword     (paste password in browser)
+      20  which git
+      21  sudo visudo -f /etc/sudoers.d/filename  (jenkins ALL=(ALL) NOPASSWD: ALL)
+      23  pwd
+      24  ll
+      25  sudo systemctl status docker
+      26  sudo systemctl start docker
+      27  sudo systemctl status docker
+      28  sudo docker image list
+      30  sudo docker ps
+      31  git init
+          git status
+          git add .
+          git remote add origin <>
+      32  vi Dockerfile 
+      35  sudo docker build -t my-docker -f Dockerfile .
+      37  sudo docker image list
+      40  vi train-lda.py
+      41  sudo docker image list
+      42  sudo docker build -t my-docker-lda -f Dockerfile .
+      44  sudo docker ps
+      45  sudo docker image list
+      46  sudo docker build -t my-docker-automl -f Dockerfile .
+      47  sudo docker build -t my-docker-nn -f Dockerfile .
+      48  sudo docker image list
 
 
 
 create job 
+
 copy and paste in  build steps: select execut shell>> paste below 
+
 -----------------------------------
 mlproject
 ----------------------------------
@@ -119,8 +122,8 @@ else
 fi
     
 
-=======================================================================
-
+=======================================================================All Commands=======================================================================
+==========================================================================================================================================================
     1  sudo yum update -y
     2  sudo yum upgrade -y
     3  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
